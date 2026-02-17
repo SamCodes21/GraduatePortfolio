@@ -96,11 +96,7 @@ nav button:hover {
     height: 3px;
     width: 250px;
     margin-top: 10px;
-    background: linear-gradient(
-        to right,
-        var(--cream),
-        transparent
-    );
+    background: linear-gradient(to right, var(--cream), transparent);
 }
 
 /* Divider line between sections */
@@ -120,6 +116,13 @@ nav button:hover {
     gap: 50px;
 }
 
+/* FIX: Allow text to share space equally */
+.project-text,
+.research-text {
+    flex: 1;
+    min-width: 300px;
+}
+
 .project-text h3,
 .research-text h3 {
     font-size: 1.5rem;
@@ -135,6 +138,7 @@ nav button:hover {
 /* Image Containers */
 .image-container {
     flex: 1;
+    min-width: 300px; /* prevents collapse */
     overflow: hidden;
     border-radius: 20px;
     cursor: pointer;
@@ -146,6 +150,7 @@ nav button:hover {
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
+    display: block;
 }
 
 .image-container:hover img {
@@ -205,4 +210,19 @@ footer {
     margin-top: 80px;
     text-align: center;
     color: var(--taupe);
+}
+
+/* Responsive Fix */
+@media (max-width: 900px) {
+    .project-card,
+    .research-card,
+    .about-container {
+        flex-direction: column;
+    }
+
+    .image-container,
+    .project-text,
+    .research-text {
+        width: 100%;
+    }
 }
