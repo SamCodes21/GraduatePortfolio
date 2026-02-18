@@ -31,12 +31,23 @@ header {
     align-items: center;
     padding: 20px 10%;
     z-index: 1000;
+
+    border-bottom: 3px solid var(--cream);
 }
 
 .logo {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    cursor: pointer;
+    text-decoration: none;
+    color: var(--primary-light);
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    border: 2px solid var(--cream);
     color: var(--cream);
 }
 
@@ -69,6 +80,14 @@ nav button:hover {
     min-height: 100vh;
 }
 
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    width: 100%;
+}
+
 .home-content h1 {
     font-size: 3rem;
     color: var(--cream);
@@ -79,6 +98,27 @@ nav button:hover {
     max-width: 600px;
     font-size: 1.2rem;
     color: var(--taupe);
+}
+
+.home-text {
+    flex: 1;
+}
+
+.home-gif {
+    flex: 1;
+    max-width: 800px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid var(--cream);
+    width: 100%;
+    height: auto;
+    display: block;
+    min-width: 600px;
+}
+
+.home-gif img {
+    width: 100%;
+    display: block;
 }
 
 /* Section Titles */
@@ -101,9 +141,15 @@ nav button:hover {
 
 /* Divider line between sections */
 .divider {
-    height: 1px;
+    height: 3px;
     width: 100%;
-    background-color: var(--secondary-dark);
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--cream),
+        transparent
+    );
+    opacity: 0.6;
 }
 
 /* Project & Research Layout */
@@ -111,7 +157,7 @@ nav button:hover {
 .research-card {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 100px;
     gap: 50px;
 }
@@ -121,6 +167,10 @@ nav button:hover {
 .research-text {
     flex: 1;
     min-width: 300px;
+    padding: 35px;
+    border-radius: 20px;
+    border: 2px solid var(--cream);
+    background-color: var(--secondary-dark);
 }
 
 .project-text h3,
@@ -143,6 +193,7 @@ nav button:hover {
     border-radius: 20px;
     cursor: pointer;
     background-color: var(--secondary-dark);
+    transition: box-shadow 0.3s ease;
 }
 
 .image-container img {
@@ -151,6 +202,11 @@ nav button:hover {
     object-fit: cover;
     transition: transform 0.4s ease;
     display: block;
+}
+
+.image-container:hover {
+    box-shadow: 0 0 0 2px var(--cream),
+                0 0 20px rgba(242, 240, 201, 0.3);
 }
 
 .image-container:hover img {
@@ -206,10 +262,11 @@ nav button:hover {
     background: var(--sand);
 }
 
-footer {
-    margin-top: 80px;
+.site-footer {
     text-align: center;
+    padding: 30px 0;
     color: var(--taupe);
+    border-top: 1px solid var(--secondary-dark);
 }
 
 /* Responsive Fix */

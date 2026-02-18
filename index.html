@@ -9,7 +9,7 @@
 <body>
 
 <header>
-    <div class="logo" onclick="scrollToSection('home')">Samuel Doerr</div>
+    <a href="#home" class="logo">Samuel Doerr Portfolio</a>
     <nav>
         <button onclick="scrollToSection('projects')">Projects</button>
         <button onclick="scrollToSection('research')">Research</button>
@@ -20,13 +20,18 @@
 
 <section id="home" class="section home-section">
     <div class="home-content">
-        <h1>Game Developer & Researcher</h1>
-        <p>
-            I create interactive experiences that explore mechanics, emotion,
-            and atmosphere. This portfolio showcases my development projects,
-            technical experiments, and academic research focused on games as
-            meaningful experiences.
-        </p>
+        <div class="home-text">
+            <h1>Website Overview:</h1>
+            <p>
+                The goal of this website is to host and showcase some of the projects that I’ve created. 
+                This portfolio website helps demonstrate various development projects, design practices, and academic research I’ve conducted with a
+                 focus on games as meaningful experiences.
+            </p>
+        </div>
+
+        <div class="home-gif">
+            <img src="Images/PortfolioDemoOverview.gif" alt="Showcase GIF">
+        </div>
     </div>
 </section>
 
@@ -85,7 +90,9 @@
     <div class="about-container">
         <div class="about-box">
             <h3>About</h3>
-            <p>Write a short bio about yourself here.</p>
+            <p>My name’s Samuel Doerr and I’m an undergraduate student at Michigan State University in the Games and Interactive Media department. Video games have been a constant positive force in my life, helping me through some of the toughest moments in my life while providing me with valuable memories to this day. For me games are more than just a form of entertainment and that’s why I’ve pursued a degree in the field of Games and Interactive Media. One day I hope to help publish games that both entertain and leave positive lasting impressions on players, just as they have for me.<br> 
+Currently I’m working on various small scale demos inside Unity to quickly showcase and highlight unique gameplay styles and scenes. Additionally, I’ve been working on UI/UX design inside Figma and After Effects, planning to create reactive UI/UX scenes that could be easily implemented into a game engine.
+</p>
         </div>
 
         <div class="about-box">
@@ -105,11 +112,11 @@
     <h2>Contact</h2>
     <p>If you'd like to get in touch, feel free to email me.</p>
     <a href="mailto:doerrsa2@msu.edu" class="email-button">Email Me</a>
-
-    <footer>
-        <small>doerrsa2@msu.edu</small>
-    </footer>
 </section>
+
+<footer class="site-footer">
+    <small>doerrsa2@msu.edu</small>
+</footer>
 
 <script src="script.js"></script>
 </body>
